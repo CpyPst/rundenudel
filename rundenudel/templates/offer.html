@@ -32,7 +32,9 @@
         </section>
 
         <section id="form">
-            <form>
+            <form action="/offer/" method=post>
+                {{ form.csrf_token }}
+                {{ form.name }}
                 <table>
                     <tr>
                         <td><label for="firstname">Vorname:</label></td>
