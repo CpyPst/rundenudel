@@ -60,17 +60,36 @@ def process_offer():
 
 
 def handle_offer(form):
+    accomodation = Accomodation(
+        hostid=host_id,
+        startdate=form.startdate,
+        enddate=form.enddate,
+        capacity=form.capacity,
+        kidfriendly=form.kidfriendly,
+        petfriendly=form.petfriendly,
+        street=form.street,
+        zipcode=form.zipcode,
+        aptnumber=form.aptnumber,
+        city=form.city,
+        additional=form.additional,
+    )
     try:
-         create_host(form.firstname, form.lastname, form.email, form.phone)
-    
-    db.session.add()
+        host_id = create_host(form.firstname, form.lastname, form.email, form.phone)
+        db.session.add(accomodation)
+        db.session.commit()
+    except Exception as e:
+        print(e)
+
 
 
 def create_host(firstname, lastname, email, phone):
-    if Host.query.filter_by(
+    exists = Host.query.filter_by(
         firstname=firstname, lastname=lastname, email=email
-    ).first():
-        raise AlreadyExistsException("")
+    ).first()
+    if exists:
+        return exists.id
     host = Host(firstname=firstname, lastname=lastname, email=email, phone=phone)
     db.session.add(host)
     db.session.commit()
+    db.session.refresh(host)
+    return host.id
