@@ -35,11 +35,12 @@ python3 -m venv venv
 
 source venv/bin/activate
 
-pip install Flask
+pip install -r requirements.txt
 
 ## Development server starten
 
 cd rundenudel/
 flask run
 
-
+NOTES:
+ - Datenbank URI bitte in Env-Variable "DB_URI" speichern (wird von flask gelesen)
