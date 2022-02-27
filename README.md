@@ -21,7 +21,12 @@ Daten:
 
 TODO:
 
-[ ] 
+[] Static Files bauen
+[] Flask Code schreiben
+[] SQLAlchemy lernen
+[] Dockerimages bauen
+[] Server einrichten
+[] Adminpanel ??
 
 
 ## Setup
