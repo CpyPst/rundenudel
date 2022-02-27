@@ -48,3 +48,4 @@ flask run
 
 NOTES:
  - Datenbank URI bitte in Env-Variable "DB_URI" speichern (wird von flask gelesen)
+ - secret key flask in Env-Variable "FLASK_KEY" speichern

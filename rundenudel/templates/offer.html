@@ -26,7 +26,7 @@
                     Mhm, ja, Kolleg, willkommen in Berlin (Bra)</p>
             </section>
 
-            <form>
+            <form method=post action="/offer/">
                 <label for="firstname">Vorname:</label><br>
                 <input type="text" id="firstname" name="firstname"><br>
                 <label for="lastname">Nachname:</label><br>
@@ -35,12 +35,12 @@
                 <input type="email" id="email" name="email"><br>
                 <label for="phone">Telefon:</label><br>
                 <input type="tel" id="phone" name="phone"><br>
-                <label for="str">Stra&szlig;e:</label><br>
+                <label for="street">Stra&szlig;e:</label><br>
                 <input type="text" id="street" name="street"><br>
                 <label for="aptnumber">Hausnummer:</label><br>
                 <input type="text" id="aptnumber" name="aptnumber"><br>
-                <label for="zip">PLZ:</label><br>
-                <input type="text" id="zip" name="zip"><br>
+                <label for="zipcode">PLZ:</label><br>
+                <input type="text" id="zipcode" name="zipcode"><br>
                 <label for="city">Ort:</label><br>
                 <input type="text" id="city" name="city"><br>
                 <label for="capacity">Kapazit&auml;t:</label><br>
@@ -58,6 +58,10 @@
                 <label for="petfriendly">Haustiere aktepztiert</label><br>
                 <input type="checkbox" id="dsgvo" name="dsgvo" value="DSGVO">
                 <label for="dsgvo">Ich bin mit der Speicherung der Daten im Einklang mit der europ&auml;ischen Datenschutzverordnung einverstanden.</label><br>
+                {% if form %}
+                {{ form.csrf_token }}
+                {{ form.name }}
+                {% endif %}
                 <input type="submit" value="Absenden">
             </form>
         </main>
