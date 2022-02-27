@@ -7,12 +7,42 @@ from flask_wtf import FlaskForm
 from wtforms import StringField, EmailField, IntegerField, DateField, BooleanField
 from wtforms.validators import Length, DataRequired, Regexp, NumberRange, Email
 from flask_sqlalchemy import SQLAlchemy
-from rundenudel import Host, Accomodation
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("DB_URI")
 app.secret_key = os.getenv("FLASK_KEY")
 db = SQLAlchemy(app)
+
+# Database Class for Accomodation
+class Accomodation(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    hostid = db.Column(db.Integer, db.ForeignKey("host.id"))
+    startdate = db.Column(db.Date, nullable=False)
+    enddate = db.Column(db.Date, nullable=False)
+    capacity = db.Column(db.Integer, nullable=False)
+    kidfriendly = db.Column(db.Boolean, default=False)
+    petfriendly = db.Column(db.Boolean, default=False)
+    street = db.Column(db.String, nullable=False)
+    zipcode = db.Column(db.String(5), nullable=False)
+    aptnumber = db.Column(db.String(10), nullable=False)
+    city = db.Column(db.String, nullable=False)
+    additional = db.Column(db.String, nullable=False)
+
+    def __repr__(self):
+        return "<Accomodation %r>" % self.id
+
+
+# Database Class for Host
+class Host(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    firstname = db.Column(db.String(100), nullable=False)
+    lastname = db.Column(db.String(100), nullable=False)
+    email = db.Column(db.String(200), nullable=True)
+    phone = db.Column(db.String, nullable=True)
+    accomodations = db.relationship("Host", backref="accomodation")
+
+    def __repr__(self):
+        return "<Host %r>" % self.id
 
 
 def checked(form, field):
@@ -60,21 +90,21 @@ def offer_form():
 
 
 def handle_offer(form):
-    accomodation = Accomodation(
-        hostid=host_id,
-        startdate=form.startdate,
-        enddate=form.enddate,
-        capacity=form.capacity,
-        kidfriendly=form.kidfriendly,
-        petfriendly=form.petfriendly,
-        street=form.street,
-        zipcode=form.zipcode,
-        aptnumber=form.aptnumber,
-        city=form.city,
-        additional=form.additional,
-    )
     try:
         host_id = create_host(form.firstname, form.lastname, form.email, form.phone)
+        accomodation = Accomodation(
+            hostid=host_id,
+            startdate=form.startdate,
+            enddate=form.enddate,
+            capacity=form.capacity,
+            kidfriendly=form.kidfriendly,
+            petfriendly=form.petfriendly,
+            street=form.street,
+            zipcode=form.zipcode,
+            aptnumber=form.aptnumber,
+            city=form.city,
+            additional=form.additional,
+        )
         db.session.add(accomodation)
         db.session.commit()
     except Exception as e:

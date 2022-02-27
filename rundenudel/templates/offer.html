@@ -1,89 +1,94 @@
 <!doctype html>
 
 <html>
-    <head>
-        <title>Offer</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../static/style.css">
-    </head>
-    <body>
-        <main>
-            <div class="header-img">
-                <img src={{ url_for("static", filename="logo.png") }}>
-            </div>
 
-            <section id="link"><a href="https://mission-lifeline.de">Zur&uuml;ck zur Homepage von Mission Lifeline</a></section>
-            <section id="caption">
-                <h1>Eure Hilfe ist gefragt!</h1>
-                <p>Ba-ba-bam-bam, ba-ba-bam<br>
-                    Ba-bam, ba-ba-bam-bam, ba-ba-bam<br>
-                    Bra, wir tragen Rolex Original (Original)<br>
-                    Mhm, hajde, Bratan, bring mir Tilidin (Tilidin)<br>
-                    Viel zu viele wollen, dass wir fall'n (viel zu viele, Bra)<br>
-                    Mhm, ja, Kollege, willkommen in Berlin (ba-ba-bam-bam)<br>
-                    Bra, wir tragen Rolex Original (Original)<br>
-                    Mhm, hajde, Bratan, bring mir Tilidin (Tilidin)<br>
-                    Viel zu viele wollen, dass wir fall'n (viel zu viele, Bra)<br>
-                    Mhm, ja, Kolleg, willkommen in Berlin (Bra)</p>
-            </section>
+<head>
+    <title>Offer</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../static/style.css">
+</head>
 
-            <section id="form">
-                <form>
-                    <table>
-                        <tr>
-                            <td><label for="firstname">Vorname:</label></td>
-                            <td><input type="text" id="firstname" name="firstname"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="lastname">Nachname:</label></td>
-                            <td><input type="text" id="lastname" name="lastname"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="email">Email:</label><br></td>
-                            <td><input type="email" id="email" name="email"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="phone">Telefon:</label></td>
-                            <td><input type="tel" id="phone" name="phone"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="street">Stra&szlig;e:</label></td>
-                            <td><input type="text" id="street" name="street"></td>
-                        </tr>
-                        <tr>
+<body>
+    <main>
+        <div class="header-img">
+            <img src={{ url_for("static", filename="logo.png" ) }}>
+        </div>
+
+        <section id="link"><a href="https://mission-lifeline.de">Zur&uuml;ck zur Homepage von Mission Lifeline</a>
+        </section>
+        <section id="caption">
+            <h1>Eure Hilfe ist gefragt!</h1>
+            <p>Ba-ba-bam-bam, ba-ba-bam<br>
+                Ba-bam, ba-ba-bam-bam, ba-ba-bam<br>
+                Bra, wir tragen Rolex Original (Original)<br>
+                Mhm, hajde, Bratan, bring mir Tilidin (Tilidin)<br>
+                Viel zu viele wollen, dass wir fall'n (viel zu viele, Bra)<br>
+                Mhm, ja, Kollege, willkommen in Berlin (ba-ba-bam-bam)<br>
+                Bra, wir tragen Rolex Original (Original)<br>
+                Mhm, hajde, Bratan, bring mir Tilidin (Tilidin)<br>
+                Viel zu viele wollen, dass wir fall'n (viel zu viele, Bra)<br>
+                Mhm, ja, Kolleg, willkommen in Berlin (Bra)</p>
+        </section>
+
+        <section id="form">
+            <form>
+                <table>
+                    <tr>
+                        <td><label for="firstname">Vorname:</label></td>
+                        <td><input type="text" id="firstname" name="firstname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="lastname">Nachname:</label></td>
+                        <td><input type="text" id="lastname" name="lastname"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="email">Email:</label><br></td>
+                        <td><input type="email" id="email" name="email"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="phone">Telefon:</label></td>
+                        <td><input type="tel" id="phone" name="phone"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="street">Stra&szlig;e:</label></td>
+                        <td><input type="text" id="street" name="street"></td>
+                    </tr>
+                    <tr>
                         <td><label for="aptnumber">Hausnummer:</label></td>
                         <td><input type="text" id="aptnumber" name="aptnumber"></td>
-                        </tr> 
-                        <tr>
-                            <td><label for="zipcode">PLZ:</label></td>
-                            <td><input type="text" id="zipcode" name="zipcode"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="city">Ort:</label></td>
-                            <td><input type="text" id="city" name="city"></td>
-                        </tr>
-                        <tr>
-                            <td><label for="capacity">Kapazit&auml;t:</label></td>
-                            <td><input type="number" id="capacity" name="capacity"></td>
-                        </tr>
-                    </table>
-                    <label for="additional">Sonstige Informationen:</label><br>
-                    <textarea rows="5" cols="50" name="additional"></textarea><br>
-                    Verf&uuml;gbar<br>
-                    <label for="startdate">von: </label>
-                    <input type="date" id="startdate" name="startdate"><br>
-                    <label for="enddate">bis: </label>
-                    <input type="date" id="enddate" name="enddate"><br>
-                    <input type="checkbox" id="kidfriendly" name="kidfriendly" value="kidfriendly">
-                    <label for="kidfriendly"> Kinderfreundlich</label><br>
-                    <input type="checkbox" id="petfriendly" name="petfriendly" value="petfriendly">
-                    <label for="petfriendly">Haustiere aktzeptiert</label><br>
-                    <input type="checkbox" id="dsgvo" name="dsgvo" value="DSGVO">
-                    <label for="dsgvo">Ich bin mit der Speicherung der Daten im Einklang mit der europ&auml;ischen Datenschutzverordnung einverstanden.</label><br>
-                    <input type="submit" value="Absenden">
-                </form>
-            </section>
-        </main>
-    </body>    
+                    </tr>
+                    <tr>
+                        <td><label for="zipcode">PLZ:</label></td>
+                        <td><input type="text" id="zipcode" name="zipcode"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="city">Ort:</label></td>
+                        <td><input type="text" id="city" name="city"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="capacity">Kapazit&auml;t:</label></td>
+                        <td><input type="number" id="capacity" name="capacity"></td>
+                    </tr>
+                </table>
+                <label for="additional">Sonstige Informationen:</label><br>
+                <textarea rows="5" cols="50" name="additional"></textarea><br>
+                Verf&uuml;gbar<br>
+                <label for="startdate">von: </label>
+                <input type="date" id="startdate" name="startdate"><br>
+                <label for="enddate">bis: </label>
+                <input type="date" id="enddate" name="enddate"><br>
+                <input type="checkbox" id="kidfriendly" name="kidfriendly" value="kidfriendly">
+                <label for="kidfriendly"> Kinderfreundlich</label><br>
+                <input type="checkbox" id="petfriendly" name="petfriendly" value="petfriendly">
+                <label for="petfriendly">Haustiere aktzeptiert</label><br>
+                <input type="checkbox" id="dsgvo" name="dsgvo" value="DSGVO">
+                <label for="dsgvo">Ich bin mit der Speicherung der Daten im Einklang mit der europ&auml;ischen
+                    Datenschutzverordnung einverstanden.</label><br>
+                <input type="submit" value="Absenden">
+            </form>
+        </section>
+    </main>
+</body>
+
 </html>
