@@ -10,7 +10,7 @@
     <body>
         <main>
             <div class="header-img">
-                <img src="logo.png">
+                <img src={{ url_for("static", filename="logo.png") }}>
             </div>
 
             <section id="link"><a href="https://mission-lifeline.de">Zur&uuml;ck zur Homepage von Mission Lifeline</a></section>
@@ -78,11 +78,10 @@
                     <input type="checkbox" id="kidfriendly" name="kidfriendly" value="kidfriendly">
                     <label for="kidfriendly"> Kinderfreundlich</label><br>
                     <input type="checkbox" id="petfriendly" name="petfriendly" value="petfriendly">
-                    <label for="petfriendly">Haustiere aktepztiert</label><br>
+                    <label for="petfriendly">Haustiere aktzeptiert</label><br>
                     <input type="checkbox" id="dsgvo" name="dsgvo" value="DSGVO">
                     <label for="dsgvo">Ich bin mit der Speicherung der Daten im Einklang mit der europ&auml;ischen Datenschutzverordnung einverstanden.</label><br>
                     <input type="submit" value="Absenden">
-                    
                 </form>
             </section>
         </main>
