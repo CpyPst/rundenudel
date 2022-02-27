@@ -43,6 +43,8 @@ pip install -r requirements.txt
 
 ## Development server starten
 
+export FLASK_KEY=supersecretkey
+
 cd rundenudel/
 flask run
 
