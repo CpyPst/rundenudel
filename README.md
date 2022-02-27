@@ -21,13 +21,17 @@ Daten:
 
 TODO:
 
-[] Static Files bauen
-[] Flask Code schreiben
-[] SQLAlchemy lernen
-[] Dockerimages bauen
-[] Server einrichten
-[] Adminpanel ??
-
+[ ] Static Files bauen
+[ ] Flask Code schreiben
+[ ] SQLAlchemy lernen
+[ ] Dockerimages bauen
+[ ] Server einrichten
+[ ] Adminpanel ??
+[ ] Clientside input validation
+[ ] Serverside input validation
+[ ] Offer in DB schreiben
+[ ] Styling
+[ ] Confirmation Page
 
 ## Setup
 
