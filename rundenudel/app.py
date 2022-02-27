@@ -39,7 +39,7 @@ class Host(db.Model):
     lastname = db.Column(db.String(100), nullable=False)
     email = db.Column(db.String(200), nullable=True)
     phone = db.Column(db.String, nullable=True)
-    accomodations = db.relationship("Host", backref="accomodation")
+    accomodations = db.relationship("Host", backref="accomodation", primaryjoin="host.id == accomodation.id")
 
     def __repr__(self):
         return "<Host %r>" % self.id
