@@ -9,7 +9,9 @@
     </head>
     <body>
         <main>
-            <div class="header-img"></div>
+            <div class="header-img">
+                <img src="logo.png">
+            </div>
 
             <section id="link"><a href="https://mission-lifeline.de">Zur&uuml;ck zur Homepage von Mission Lifeline</a></section>
             <section id="caption">
@@ -26,44 +28,63 @@
                     Mhm, ja, Kolleg, willkommen in Berlin (Bra)</p>
             </section>
 
-            <form method=post action="/offer/">
-                <label for="firstname">Vorname:</label><br>
-                <input type="text" id="firstname" name="firstname"><br>
-                <label for="lastname">Nachname:</label><br>
-                <input type="text" id="lastname" name="lastname"><br>
-                <label for="email">Email:</label><br>
-                <input type="email" id="email" name="email"><br>
-                <label for="phone">Telefon:</label><br>
-                <input type="tel" id="phone" name="phone"><br>
-                <label for="street">Stra&szlig;e:</label><br>
-                <input type="text" id="street" name="street"><br>
-                <label for="aptnumber">Hausnummer:</label><br>
-                <input type="text" id="aptnumber" name="aptnumber"><br>
-                <label for="zipcode">PLZ:</label><br>
-                <input type="text" id="zipcode" name="zipcode"><br>
-                <label for="city">Ort:</label><br>
-                <input type="text" id="city" name="city"><br>
-                <label for="capacity">Kapazit&auml;t:</label><br>
-                <input type="number" id="capacity" name="capacity"><br>
-                <label for="additional">Sonstige Informationen:</label><br>
-                <input type="text" id="addational" name="additional"><br>
-                Verf&uuml;gbar<br>
-                <label for="startdate">von: </label>
-                <input type="date" id="startdate" name="startdate"><br>
-                <label for="enddate">bis: </label>
-                <input type="date" id="enddate" name="enddate"><br>
-                <input type="checkbox" id="kidfriendly" name="kidfriendly" value="kidfriendly">
-                <label for="kidfriendly"> Kinderfreundlich</label><br>
-                <input type="checkbox" id="petfriendly" name="petfriendly" value="petfriendly">
-                <label for="petfriendly">Haustiere aktepztiert</label><br>
-                <input type="checkbox" id="dsgvo" name="dsgvo" value="DSGVO">
-                <label for="dsgvo">Ich bin mit der Speicherung der Daten im Einklang mit der europ&auml;ischen Datenschutzverordnung einverstanden.</label><br>
-                {% if form %}
-                {{ form.csrf_token }}
-                {{ form.name }}
-                {% endif %}
-                <input type="submit" value="Absenden">
-            </form>
+            <section id="form">
+                <form>
+                    <table>
+                        <tr>
+                            <td><label for="firstname">Vorname:</label></td>
+                            <td><input type="text" id="firstname" name="firstname"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="lastname">Nachname:</label></td>
+                            <td><input type="text" id="lastname" name="lastname"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="email">Email:</label><br></td>
+                            <td><input type="email" id="email" name="email"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="phone">Telefon:</label></td>
+                            <td><input type="tel" id="phone" name="phone"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="street">Stra&szlig;e:</label></td>
+                            <td><input type="text" id="street" name="street"></td>
+                        </tr>
+                        <tr>
+                        <td><label for="aptnumber">Hausnummer:</label></td>
+                        <td><input type="text" id="aptnumber" name="aptnumber"></td>
+                        </tr> 
+                        <tr>
+                            <td><label for="zipcode">PLZ:</label></td>
+                            <td><input type="text" id="zipcode" name="zipcode"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="city">Ort:</label></td>
+                            <td><input type="text" id="city" name="city"></td>
+                        </tr>
+                        <tr>
+                            <td><label for="capacity">Kapazit&auml;t:</label></td>
+                            <td><input type="number" id="capacity" name="capacity"></td>
+                        </tr>
+                    </table>
+                    <label for="additional">Sonstige Informationen:</label><br>
+                    <textarea rows="5" cols="50" name="additional"></textarea><br>
+                    Verf&uuml;gbar<br>
+                    <label for="startdate">von: </label>
+                    <input type="date" id="startdate" name="startdate"><br>
+                    <label for="enddate">bis: </label>
+                    <input type="date" id="enddate" name="enddate"><br>
+                    <input type="checkbox" id="kidfriendly" name="kidfriendly" value="kidfriendly">
+                    <label for="kidfriendly"> Kinderfreundlich</label><br>
+                    <input type="checkbox" id="petfriendly" name="petfriendly" value="petfriendly">
+                    <label for="petfriendly">Haustiere aktepztiert</label><br>
+                    <input type="checkbox" id="dsgvo" name="dsgvo" value="DSGVO">
+                    <label for="dsgvo">Ich bin mit der Speicherung der Daten im Einklang mit der europ&auml;ischen Datenschutzverordnung einverstanden.</label><br>
+                    <input type="submit" value="Absenden">
+                    
+                </form>
+            </section>
         </main>
     </body>    
 </html>
