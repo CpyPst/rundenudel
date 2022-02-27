@@ -3,45 +3,63 @@
 <html>
     <head>
         <title>Offer</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="../static/style.css">
     </head>
-
     <body>
-        <h1>Angebote</h1>
+        <main>
+            <div class="header-img"></div>
 
-        <form>
-            <label for="firstname">Vorname:</label><br>
-            <input type="text" id="firstname" name="firstname"><br>
-            <label for="lastname">Nachname:</label><br>
-            <input type="text" id="lastname" name="lastname"><br>
-            <label for="email">Email:</label><br>
-            <input type="text" id="email" name="email"><br>
-            <label for="phone">Telefon:</label></form><br>
-            <input type="text" id="phone" name="phone"><br>
-            <label for="str">Stra&szlig;e:</label><br>
-            <input type="text" id="street" name="street"><br>
-            <label for="aptnumber">Hausnummer:</label><br>
-            <input type="text" id="aptnumber" name="aptnumber"><br>
-            <label for="zip">PLZ:</label><br>
-            <input type="text" id="zip" name="zip"><br>
-            <label for="city">Ort:</label><br>
-            <input type="text" id="city" name="city"><br>
-            <label for="capacity">Kapazit&auml;t:</label><br>
-            <input type="number" id="capacity" name="capacity"><br>
-            <label for="additional">Sonstige Informationen:</label><br>
-            <input type="text" id="addational" name="additional"><br>
-            Verf&uuml;gbar<br>
-            <label for="startdate">von: </label>
-            <input type="date" id="startdate" name="startdate"><br>
-            <label for="enddate">bis: </label>
-            <input type="date" id="enddate" name="enddate"><br>
+            <section id="link"><a href="https://mission-lifeline.de">Zur&uuml;ck zur Homepage von Mission Lifeline</a></section>
+            <section id="caption">
+                <h1>Eure Hilfe ist gefragt!</h1>
+                <p>Ba-ba-bam-bam, ba-ba-bam<br>
+                    Ba-bam, ba-ba-bam-bam, ba-ba-bam<br>
+                    Bra, wir tragen Rolex Original (Original)<br>
+                    Mhm, hajde, Bratan, bring mir Tilidin (Tilidin)<br>
+                    Viel zu viele wollen, dass wir fall'n (viel zu viele, Bra)<br>
+                    Mhm, ja, Kollege, willkommen in Berlin (ba-ba-bam-bam)<br>
+                    Bra, wir tragen Rolex Original (Original)<br>
+                    Mhm, hajde, Bratan, bring mir Tilidin (Tilidin)<br>
+                    Viel zu viele wollen, dass wir fall'n (viel zu viele, Bra)<br>
+                    Mhm, ja, Kolleg, willkommen in Berlin (Bra)</p>
+            </section>
 
-            <input type="checkbox" id="kid" name="kid" value="Kid">
-            <label for="kid"> Kinderfreundlich</label><br>
-            <input type="checkbox" id="animal" name="animal" value="Animal">
-            <label for="vehicle2">Haustiere aktepztiert</label><br>
-            <input type="checkbox" id="dsgvo" name="dsgvo" value="DSGVO">
-            <label for="dsgvo">Ich bin mit der Speicherung der Daten im Einklang mit der europ&auml;ischen Datenschutzverordnung einverstanden.</label><br>
-            <input type="submit" value="Absenden">
-        </form>
-    </body>
+            <form>
+                <label for="firstname">Vorname:</label><br>
+                <input type="text" id="firstname" name="firstname"><br>
+                <label for="lastname">Nachname:</label><br>
+                <input type="text" id="lastname" name="lastname"><br>
+                <label for="email">Email:</label><br>
+                <input type="email" id="email" name="email"><br>
+                <label for="phone">Telefon:</label><br>
+                <input type="tel" id="phone" name="phone"><br>
+                <label for="str">Stra&szlig;e:</label><br>
+                <input type="text" id="street" name="street"><br>
+                <label for="aptnumber">Hausnummer:</label><br>
+                <input type="text" id="aptnumber" name="aptnumber"><br>
+                <label for="zip">PLZ:</label><br>
+                <input type="text" id="zip" name="zip"><br>
+                <label for="city">Ort:</label><br>
+                <input type="text" id="city" name="city"><br>
+                <label for="capacity">Kapazit&auml;t:</label><br>
+                <input type="number" id="capacity" name="capacity"><br>
+                <label for="additional">Sonstige Informationen:</label><br>
+                <input type="text" id="addational" name="additional"><br>
+                Verf&uuml;gbar<br>
+                <label for="startdate">von: </label>
+                <input type="date" id="startdate" name="startdate"><br>
+                <label for="enddate">bis: </label>
+                <input type="date" id="enddate" name="enddate"><br>
+                <input type="checkbox" id="kidfriendly" name="kidfriendly" value="kidfriendly">
+                <label for="kidfriendly"> Kinderfreundlich</label><br>
+                <input type="checkbox" id="petfriendly" name="petfriendly" value="petfriendly">
+                <label for="petfriendly">Haustiere aktepztiert</label><br>
+                <input type="checkbox" id="dsgvo" name="dsgvo" value="DSGVO">
+                <label for="dsgvo">Ich bin mit der Speicherung der Daten im Einklang mit der europ&auml;ischen Datenschutzverordnung einverstanden.</label><br>
+                <input type="submit" value="Absenden">
+            </form>
+        </main>
+    </body>    
 </html>
