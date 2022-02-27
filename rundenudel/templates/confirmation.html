@@ -5,14 +5,14 @@
         <title>Vielen Dank!</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="../static/style.css">
+        <link rel="stylesheet" href={{ url_for("static", filename="style.css") }}>
     </head>
     
 
     <body>
         <main>
             <div class="header-img">
-                <img src="logo.png">
+                <img src={{ url_for("static", filename="logo.png") }}>
             </div>
 
             <section>
@@ -21,6 +21,7 @@
                     Bei weiteren Rückfragen kontaktiert uns unter deine@mutter.de
                 </p>
             </section>
+            <section id="link"><a href={{ url_for("templates", filename="offer.html") }}>Zur&uuml;ck zum Formular</a></section>
             <section id="link"><a href="https://mission-lifeline.de">Zur&uuml;ck zur Homepage von Mission Lifeline</a></section>
         </main>
     </body>
