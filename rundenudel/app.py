@@ -84,9 +84,11 @@ def offer_form():
     form = OfferForm()
     if form.validate_on_submit():
         handle_offer(form)
-        return redirect("/confirmation/")
+        return render_template("/confirmation.html")
+        #return redirect("/confirmation")
     else:
         return render_template("offer.html", form=form)
+
 
 
 def handle_offer(form):
